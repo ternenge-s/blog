@@ -1,23 +1,28 @@
-import React, { useState } from 'react';
-import './App.css';
+import {
+  Header,
+  Hero,
+  Projects,
+  Technologies,
+  About,
+  TimeLine,
+  Footer,
+} from './components';
 
-function App(props) {
-  const [text, setText] = useState('');
+import 'tailwindcss/tailwind.css';
+import './Global.less';
 
-  function HandleInput(e) {
-    value = e.target.value
-  }
-
+function App() {
   return (
-    <div className="App">
-      <h1>Hello, {props.name}</h1>
-      <input
-        type="text"
-        value={text}
-        placeholder="Type here"
-        onChange={(e)=>setText(e.target.value)}
-      />
-      <p><strong>your entry is:</strong>{text}</p>
+    <div className=" app container mx-auto">
+      <Header />
+      <main className="container mx-auto p-3">
+        <Hero />
+        <About />
+        <Projects />
+        <Technologies />
+        <TimeLine />
+      </main>
+      <Footer />
     </div>
   );
 }
