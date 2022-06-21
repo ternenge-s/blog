@@ -3,7 +3,6 @@ import {
   Hero,
   Projects,
   Technologies,
-  About,
   TimeLine,
   Footer,
 } from './components';
@@ -13,11 +12,10 @@ import './Global.less';
 
 function App() {
   return (
-    <div className=" app container mx-auto">
+    <div className="app container mx-auto">
       <Header />
       <main className="container mx-auto p-3">
         <Hero />
-        <About />
         <Projects />
         <Technologies />
         <TimeLine />

@@ -4,8 +4,8 @@ import './Technologies.less';
 
 const Technologies = () => {
   return (
-    <section id="tech" className="tech text-white">
-      <h2 className="text-sky-500 mb-3">Technologies</h2>
+    <section id="tech" className="tech container">
+      <h2 className="heading">Technologies</h2>
       <div className="div1">
         <div className="fend">
           <h4 className="mb-3 text-xl">front end</h4>

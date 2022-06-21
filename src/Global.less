@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+  color: #f9ebff;
+  transition: 0.3s ease;
+  scroll-behavior: smooth;
+}
+
 :root {
   /* breakpoints */
   --mobile-width: 640px;
@@ -15,47 +23,47 @@
   --second-bg: hsl(232.7, 27.3%, 23.7%);
 
   /* fonts */
-
-  --title-font: 'Space Grotesk, sans-serif';
-  --main-font: 'Space Grotesk, sans-serif';
+}
+.underline {
+  height: 2px;
+  width: 30px;
+  background-image: linear-gradient(to right, wheat, skyblue, seagreen);
+  border-radius: 3px;
 }
 
 a {
   text-decoration: none;
   margin: 4px;
-  color: var(--second-color);
   cursor: pointer;
   font-size: 16px;
+  font-family: 'Roboto Mono monospace';
 
   transition: 0.3s ease;
-
-  &:hover {
-    color: var(--primary-color);
-  }
 
   @media screen and (max-width: var(--tablet-width)) {
     font-size: 20px;
   }
 }
-p {
-  color: var(--second-color);
-  transition: 0.3s ease-in-out;
 
-  &:hover {
-    color: white;
-    font-smooth: 200;
-    font-weight: 500;
-  }
+p {
+  transition: 0.3s ease-in-out;
+  font-family: 'Lato', sans-serif;
 }
+.heading {
+  font-family: 'Roboto mono', monospace;
+  color: #ffb975;
+  text-transform: uppercase;
+}
+
 li {
   list-style: none;
 }
 #root {
   max-width: 100vw;
   width: 100%;
-
+  background-color: #101423;
   height: 100%;
-  background: var(--primary-bg);
+  background-position: center;
 }
 
 .btn {
@@ -65,6 +73,7 @@ li {
   border-radius: 10px;
   padding: 6px;
   margin: 3px 5px;
+  font-family: 'Roboto Mono', monospace;
 }
 .btn-group {
   display: flex;

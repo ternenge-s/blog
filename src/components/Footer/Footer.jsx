@@ -7,13 +7,18 @@ import './Footer.less';
 
 const Footer = () => {
   return (
-    <footer id="footer" className="footer px-5 text-white">
+    <footer id="footer" className="footer px-5 container">
       {/*about */}
       <div id="about" className="about">
-        <h3 className="text-sky-500 my-3">About</h3>
+        <h2 className="heading">About</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-          cupiditate dicta, necessitatibus doloribus porro eveniet, deleniti
+          I am an enthusiastic freelancer and Fullstack web developer who
+          constantly seeks out productive and innovative solutions that get the
+          job done right. Within my years in this industry, i have achieved
+          collaborative and progressive skills that meets up the formal
+          requirements of an excellent developer and freelancer. I love and
+          enjoy web development not just as one of the best careers but also i
+          do enjoy it and am commited to it.
         </p>
       </div>
 
@@ -39,27 +44,24 @@ const Footer = () => {
           <h3>chat me on social media</h3>
 
           <div className="social-icons">
-            <a href="#">
+            <a target="_blank" href="https://github.com/ternenge-s">
               {' '}
               <BsGithub />
             </a>
-            <a href="#">
+            <a target="_blank" href="https://linkedin.com/in/">
               <BsLinkedin />
             </a>
-            <a href="#">
-              {' '}
+            <a target="_blank" href="https://t.me/ternenge0">
               <BsTelegram />
             </a>
-            <a href="#">
+            <a target="_blank" href="https://wa.me/2349013089948">
               <BsWhatsapp />
             </a>
           </div>
         </div>
 
         {/*copy rights */}
-        <p className="text-center text-white ">
-          &copy; 2022 Ternenge, all rights reserved
-        </p>
+        <p className="text-center">&copy; 2022 Ternenge, all rights reserved</p>
       </div>
     </footer>
   );

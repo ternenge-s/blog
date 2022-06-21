@@ -6,12 +6,12 @@ import './Projects.less';
 
 const Projects = () => {
   return (
-    <section id="projects" className="text-white projects">
-      <h2 className="text-sky-500 my-3">Projects</h2>
+    <section id="projects" className="container projects">
+      <h2 className="heading">Projects</h2>
 
       <div className="projects-container">
         {projects.map(({ title, desc, image, stack, source, live }, index) => (
-          <div key={title + index} className="project-card shadow">
+          <div key={title + index} className="project-card">
             <div className="card-image">
               <img className="object-cover" src={image} alt="" />
             </div>

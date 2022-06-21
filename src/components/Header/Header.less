@@ -4,45 +4,127 @@
   justify-content: space-between;
   padding: 4px;
   backdrop-filter: blur(4px);
-  background: rgba(255, 255, 255, 0.1);
+  background-color: #121929;
+  color: ghostwhite;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 
   @media screen and (min-width: 700px) {
     padding: 10px;
   }
 }
-.nav {
+
+#logo {
+  font-family: rosewood-std-fill, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.loader {
+  height: 5px;
+  width: 100%;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  background-color: #75bbff;
+
+  .seeker {
+    background-color: #bbff75;
+  }
+}
+.navbar {
   display: flex;
   align-items: center;
-  li {
+  color: black;
+  z-index: 99;
+
+  .navbar-toggler {
     display: flex;
-    margin-left: 10px;
-    a {
+    padding: 5px;
+    border-radius: 20px;
+    background: rgb(185, 117, 255);
+
+    margin-right: 5px;
+    svg {
       font-size: 24px;
       transition: 0.3s ease-in-out;
+    }
+  }
 
-      @media screen and (min-width: 700px) {
-        margin-left: 10px;
-      }
-      @media screen and (max-width: 700px) {
-        &:hover {
-          font-size: 30px;
-          &::before {
-            content: attr(name);
-            font-size: 14px;
-            position: absolute;
-            bottom: -10px;
-            z-index: 99;
-          }
-        }
+  .nav-list {
+    height: 200px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 45px;
+    height: 100vh;
+    background-color: #121929;
+
+    width: 0;
+    margin-right: -310px;
+    transition: 0.5s ease-in-out;
+
+    .icons {
+      display: flex;
+      width: 100%;
+      padding: 5px;
+      justify-content: flex-start;
+      align-items: center;
+
+      margin-top: 20px;
+
+      svg {
+        font-size: 20px;
       }
     }
+  }
+
+  .nav-item {
+    width: 100%;
+    cursor: pointer;
+    height: 50px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+
+    transition: 0.5s ease-in-out;
+
+    a {
+      color: ghostwhite;
+      width: 100%;
+      padding-left: 10px;
+
+      &:hover {
+        color: black;
+      }
+    }
+
+    &:hover {
+      background-color: ghostwhite;
+    }
+  }
+
+  .open {
+    width: 300px;
+    margin-right: 0;
   }
 }
 
 .social-icons {
   display: flex;
   align-items: center;
-
+  svg {
+    color: white;
+    font-size: 20px;
+    stroke: rgb(185, 117, 255);
+  }
   a {
     margin-left: 5px;
     font-size: 24px;
