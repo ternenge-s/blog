@@ -12,10 +12,9 @@ const Hero = () => {
 
       <div className="objective-note">
         <p>
-          I am an enthusiastic web developer with the aim of building fast and
-          scaleble web pages using latest and most perfomance enhanced
-          technologies. Here you see some of my awesome projects built as
-          desired by my clients.
+          My name is Ternenge Samuel i am an enthusiastic web developer with the
+          desire of building fast an scaleble web pages. Here you see some of my
+          awesome projects.
         </p>
       </div>
 

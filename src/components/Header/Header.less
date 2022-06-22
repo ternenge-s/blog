@@ -29,12 +29,21 @@
   top: 40px;
   left: 0;
   right: 0;
-  background-color: #75bbff;
-
+  background: #75ffb9;
   .seeker {
-    background-color: #bbff75;
+    width: 100%;
+    height: 100%;
+    transition: all ease-in-out;
   }
 }
+
+.wide-nav-list {
+  display: flex;
+  text-transform: uppercase;
+  font-family: 'Roboto mono' monospace;
+  letter-spacing: normal;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -53,7 +62,6 @@
       transition: 0.3s ease-in-out;
     }
   }
-
   .nav-list {
     height: 200px;
     position: fixed;

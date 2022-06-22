@@ -39,7 +39,6 @@ router.post('/mail', (req, res) => {
     if (error) {
       res.json({ status: 'failed' });
     } else {
-      console.log(res.data);
       res.json({
         status: 'success',
         data: res.data,

@@ -31,7 +31,7 @@ const Form = () => {
   //
   //control Input change
   //
-  //
+
   function HandleInput(e) {
     e.preventDefault();
     //update input values
@@ -44,14 +44,21 @@ const Form = () => {
   //
   function HandleSubmit(e) {
     e.preventDefault();
-
-    const req = axios.post('http://localhost:3001/mail', input);
+    saveData
+      ? localStorage.setItem(
+          'userData',
+          JSON.stringify({ name: input.name, email: input.email }),
+        )
+      : '';
+    const req = axios.post(
+      `${location.protocol + '//' + location.hostname}:3001/mail`,
+      input,
+    );
 
     req
       .then((data) => {
         setMessage({ status: true, success: true });
-        setInput({ name: '', email: '', tel: 0, message: '' });
-        console.log(data);
+        setInput({ name: '', email: '', message: '' });
       })
       .catch((err) => {
         setMessage({ status: true, success: false });
@@ -91,8 +98,8 @@ const Form = () => {
         <input
           type="text"
           value={input.name}
-          name="fname"
-          id="fname"
+          name="name"
+          id="name"
           placeholder="your name"
           required
           onChange={(e) => HandleInput(e)}
@@ -105,7 +112,7 @@ const Form = () => {
           id="email"
           placeholder="your email"
           required
-          onChange={HandleInput}
+          onChange={(e) => HandleInput(e)}
         />
 
         <textarea
@@ -115,7 +122,7 @@ const Form = () => {
           id="message"
           placeholder="message"
           required
-          onChange={HandleInput}
+          onChange={(e) => HandleInput(e)}
         />
       </div>
 

@@ -12,13 +12,11 @@ const Footer = () => {
       <div id="about" className="about">
         <h2 className="heading">About</h2>
         <p>
-          I am an enthusiastic freelancer and Fullstack web developer who
-          constantly seeks out productive and innovative solutions that get the
-          job done right. Within my years in this industry, i have achieved
-          collaborative and progressive skills that meets up the formal
-          requirements of an excellent developer and freelancer. I love and
-          enjoy web development not just as one of the best careers but also i
-          do enjoy it and am commited to it.
+          I am an enthusiastic web developer who constantly seeks out productive
+          and innovative solutions that get the job done right. Within my years
+          in this industry, i have achieved collaborative and progressive skills
+          that meets up the formal requirements for an excellent developer and
+          freelancer. I love and enjoy web development and i am commited to it.
         </p>
       </div>
 
@@ -29,13 +27,6 @@ const Footer = () => {
         <div className="mail">
           <h3 className="">send me a mail</h3>
           <Form />
-        </div>
-        {/* call */}
-
-        <div className="call mx-auto">
-          <FiPhoneCall />
-
-          <a href="tel:+2348039950097">+234 803 9950 097</a>
         </div>
 
         {/* social */}
