@@ -51,9 +51,11 @@ const Form = () => {
           JSON.stringify({ name: input.name, email: input.email }),
         )
       : '';
-
+    let route = `${
+      location.protocol + '//' + location.hostname + '/3001/api/mail'
+    }`;
     axios
-      .post('http://localhost:3001/api/mail', input)
+      .post(route, input)
       .then(() => {
         setMessage({ status: true, success: true });
         setInput(() => {
