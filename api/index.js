@@ -21,7 +21,7 @@ transporter.verify((error) => {
   console.log('connection secured');
 });
 
-router.post('/mail', (req, res) => {
+router.post('/api/mail', (req, res) => {
   const { fname, lname, email, message } = req.body;
 
   let content = `name: ${
