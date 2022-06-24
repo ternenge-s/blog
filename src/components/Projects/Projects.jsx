@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { projects } from '../../contants';
-
 import './Projects.less';
 
 const Projects = () => {
+  const projects = [];
   return (
     <section id="projects" className="container projects">
       <h2 className="heading">Projects</h2>
