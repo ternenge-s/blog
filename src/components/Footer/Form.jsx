@@ -42,6 +42,7 @@ const Form = () => {
 
   // handle form submition
   //
+
   function HandleSubmit(e) {
     e.preventDefault();
     saveData
@@ -50,14 +51,16 @@ const Form = () => {
           JSON.stringify({ name: input.name, email: input.email }),
         )
       : '';
-    const req = axios.post(`${window.location.origin}+/api/mail`, input);
 
-    req
-      .then((data) => {
+    axios
+      .post('http://localhost:3001/api/mail', input)
+      .then(() => {
         setMessage({ status: true, success: true });
-        setInput({ name: '', email: '', message: '' });
+        setInput(() => {
+          message: '';
+        });
       })
-      .catch((err) => {
+      .catch(() => {
         setMessage({ status: true, success: false });
       });
 

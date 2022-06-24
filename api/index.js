@@ -64,18 +64,11 @@ router.post('/api/mail', (req, res) => {
 
 const app = express();
 
-app.use(
-  cors({
-    origin: true,
-    credentials: true,
-  }),
-);
+app.use(cors({ credentials: true, origin: '*' }));
 app.use(express.json());
 
 app.use('/', router);
 
-app.listen(process.env.PORT || 3001, (err) => {
-	if (err) console.log(err);
-
-	console.log('server started')
+app.listen(process.env.PORT || 3000, () => {
+  console.log('server started');
 });
