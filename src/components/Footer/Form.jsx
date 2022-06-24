@@ -50,10 +50,7 @@ const Form = () => {
           JSON.stringify({ name: input.name, email: input.email }),
         )
       : '';
-    const req = axios.post(
-      `${location.protocol + '//' + location.hostname}:3001/mail`,
-      input,
-    );
+    const req = axios.post(`${window.location.origin}+/api/mail`, input);
 
     req
       .then((data) => {
