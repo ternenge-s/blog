@@ -1,23 +1,30 @@
-import React from 'react';
-import { BsTelegram, BsWhatsapp, BsGithub, BsLinkedin } from 'react-icons/bs';
-import { FiPhoneCall } from 'react-icons/fi';
-import Form from './Form';
-
-import './Footer.less';
+import React, { useEffect, useState } from "react";
+import { BsTelegram, BsWhatsapp, BsGithub, BsLinkedin } from "react-icons/bs";
+import { FiPhoneCall } from "react-icons/fi";
+import Form from "./Form";
+import { client } from "../../studio";
+import "./Footer.less";
 
 const Footer = () => {
+  const [About, setAbout] = useState([]);
+  useEffect(() => {
+    client
+      .fetch(`*[_type == "about"]`)
+      .then((data) => {
+        setAbout(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <footer id="footer" className="footer px-5 container">
       {/*about */}
       <div id="about" className="about">
         <h2 className="heading">About</h2>
-        <p>
-          I am an enthusiastic web developer who constantly seeks out productive
-          and innovative solutions that get the job done right. Within my years
-          in this industry, i have achieved collaborative and progressive skills
-          that meets up the formal requirements for an excellent developer and
-          freelancer. I love and enjoy web development and i am commited to it.
-        </p>
+        {About.map((item) => {
+          return <p key={item._id}>{item.about}</p>;
+        })}
       </div>
 
       {/*Contact section */}
@@ -36,7 +43,7 @@ const Footer = () => {
 
           <div className="social-icons">
             <a target="_blank" href="https://github.com/ternenge-s">
-              {' '}
+              {" "}
               <BsGithub />
             </a>
             <a target="_blank" href="https://linkedin.com/in/">

@@ -9,22 +9,12 @@ import {
 
 import 'tailwindcss/tailwind.css';
 import './Global.less';
-import { useEffect } from 'react';
-
-import { client } from './studio';
 
 function App() {
-  useEffect(() => {
-    client
-      .fetch(`*[_name==techs]`)
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
+  //
+  //
+  //
+  //
   return (
     <div className="app container mx-auto">
       <Header />
